@@ -5,7 +5,7 @@ const { Webpack } = BoundedBdApi;
 const { Filters } = Webpack;
 
 const Flux = Webpack.getModule(Filters.byProps('Store', 'connectStores'));
-const Dispatcher = Webpack.getModule(Filters.byPrototypeFields('dispatch'), { searchExports: true });
+const Dispatcher = Webpack.getModule(Filters.byPrototypeFields('dispatch', 'subscribe', 'addInterceptor'), { searchExports: true });
 
 export const ActionTypes = {
     SETTINGS_UPDATE: 'BD_WHO_REACTED_SETTINGS_UPDATE'
